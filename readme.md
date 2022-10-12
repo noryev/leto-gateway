@@ -8,9 +8,11 @@ I'm also going to assume you've used `ipfs` before. If not, then take some time 
 
 A public IPFS gateway can be hosted at home or on the cloud.
 
-If you want to host at home, be aware that it will costs electricity and bandwidth. You can host it on an upside-down laptop running Ubuntu Server or even on a [Raspberry Pi](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/?variant=raspberry-pi-4-model-b-8gb).
+This configuration is based on a AWS EC2 Ubuntu Server [size:t2.large]
 
 ## Get a domain name
+The domain I chose for this gateway is fenring.io
+
 
 If you want a subdomain gateway, you'll need to use one that's compatible with [Let's Encrypt's wildcard plugins](https://eff-certbot.readthedocs.io/en/stable/using.html#dns-plugins). Or at least use one that allows you to change its name server to Digital Ocean, which is compatible.
 
