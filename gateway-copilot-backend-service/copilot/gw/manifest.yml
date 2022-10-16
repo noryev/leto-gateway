@@ -38,11 +38,11 @@ exec: true     # Enable running commands in your container.
 
 
 
-##### Added by thattommyhall
+##### Added by thattommyhall #2 Re-Edited by LoganL
 network:
   vpc:
     placement: 'public'
-    security_groups: ['sg-05f5beefe3e40eed3'] 
+    security_groups: ['sg-0f221241065e66ef4'] 
     # this sg was hand-cranked, exposing 4001 ipv4/6 for tcp/udp
     # copilot has an escape hatch where you can make other resources though, see
     # https://aws.github.io/copilot-cli/docs/developing/additional-aws-resources/
