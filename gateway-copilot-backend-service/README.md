@@ -1,4 +1,4 @@
-# Gateway as a copilot Backend Service (caviet - WIP!)
+# Gateway as a copilot Backend Service (WIP!)
 
 A [Backend
 Service](https://aws.github.io/copilot-cli/docs/manifest/backend-service/) on
