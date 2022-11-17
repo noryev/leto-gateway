@@ -16,3 +16,5 @@ https://bafybeid4gwmvbza257a7rx52bheeplwlaogshu4rgse3eaudfkfm7tx2my.ipfs.w3s.lin
 This is the preferred style for serving web assets over HTTP gateways, because web browsers provide security isolation on a per-domain basis. Using the subdomain style, every CID gets its own "namespace" for things like cookies and local storage, which isolates things from other web content stored on IPFS.
 
 ## Review Cloudflare configuration and edit files to leto.gg instead of ...
+
+we definately might be sticking with the Cloudflare configuration simply due to the pricing/costs equation. Also the configuration is already completed.
