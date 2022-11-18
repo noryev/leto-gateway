@@ -1,7 +1,7 @@
 {
   "name": "edge-gateway",
   "version": "1.14.3",
-  "description": "IPFS edge gateway for nft.storage",
+  "description": "IPFS edge gateway for leto",
   "private": true,
   "type": "module",
   "main": "./dist/worker.js",

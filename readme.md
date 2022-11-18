@@ -1,6 +1,6 @@
-# edge gateway link for nft.storage - leto.link
+# edge gateway link for leto - leto.link
 
-> The IPFS edge gateway for nft.storage is not "another gateway", but a caching layer for NFTs that sits on top of existing IPFS public gateways.
+> The IPFS edge gateway for leto is not "another gateway", but a caching layer for NFTs that sits on top of existing IPFS public gateways.
 
 ## Getting started
 
@@ -45,27 +45,27 @@ Notes:
 
 ## Usage
 
-nft.storage Gateway provides IPFS path style resolutions `https://leto.link/ipfs/{cid}` as follows:
+leto Gateway provides IPFS path style resolutions `https://leto.link/ipfs/{cid}` as follows:
 
 ```
 > curl https://leto.link/ipfs/bafkreidyeivj7adnnac6ljvzj2e3rd5xdw3revw4da7mx2ckrstapoupoq
-Hello nft.storage! 😎
+Hello leto! 😎
 > curl https://leto.link/ipfs/QmT5NvUtoM5nWFfrQdVrFtvGfKFmG7AHE8P34isapyhCxX
 ...
 ```
 
-In practice, when nft.storage Gateway receives a IPFS path style request, it will redirect to a subdomain style resolution maintaining compliance with the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy). The canonical form of access `https://{CID}.ipfs.leto.link/{optional path to resource}` causes the browser to interpret each returned file as being from a different origin.
+In practice, when leto Gateway receives a IPFS path style request, it will redirect to a subdomain style resolution maintaining compliance with the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy). The canonical form of access `https://{CID}.ipfs.leto.link/{optional path to resource}` causes the browser to interpret each returned file as being from a different origin.
 
 ```
 > curl https://bafkreidyeivj7adnnac6ljvzj2e3rd5xdw3revw4da7mx2ckrstapoupoq.ipfs.leto.link
-Hello nft.storage! 😎
+Hello leto! 😎
 ```
 
 Please note that subdomain resolution is only supported with [CIDv1](https://docs.ipfs.io/concepts/content-addressing/#identifier-formats) in case-insensitive encoding such as Base32 or Base36. When using IPFS path resolution, the requested CID will be converted before the redirect.
 
 ### Rate limiting
 
-nft.storage Gateway is currently rate limited at 200 requests per minute to a given IP Address. In the event of a rate limit, the IP will be blocked for 30 seconds.
+leto Gateway is currently rate limited at 200 requests per minute to a given IP Address. In the event of a rate limit, the IP will be blocked for 30 seconds.
 
 ## Deny List
 
