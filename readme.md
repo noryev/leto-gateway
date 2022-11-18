@@ -42,8 +42,7 @@ Zooming in on the actual edge gateway:
 
 Notes:
 
-- Cloudflare Cache is [limited](https://developers.cloudflare.com/workers/platform/limits/#cache-api-limits) to 512 MB size objects.
-- SuperHot perma-cache is shared with w3s.link
+- Cloudflare Cache is [limited](https://developers.cloudflare.com/workers/platform/limits/#cache-api-limits) to 200 MB size objects.
 
 ## Usage
 
