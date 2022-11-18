@@ -74,7 +74,7 @@ async function getTagsFromGoodbitsList(datastore, cid) {
     return []
   }
 
-  // TODO: Remove once https://github.com/leto/leto.link/issues/51 is fixed
+
   const goodbitsEntry = await pRetry(() => datastore.get(cid), { retries: 5 })
 
   if (goodbitsEntry) {
