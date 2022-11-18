@@ -1,5 +1,5 @@
 # leto.link wrangler config.
-name = "gateway-nft-storage"
+name = "gateway-leto"
 main = "./dist/worker.js"
 compatibility_date = "2022-07-01"
 compatibility_flags = [ "url_standard" ]
@@ -15,7 +15,7 @@ ENV = "dev"
 
 # PROD!
 [env.production]
-# name = "gateway-nft-storage-production"
+# name = "gateway-leto-production"
 account_id = "fffa4b4363a7e5250af8357087263b3a" # Protocol Labs CF account
 routes = [
   { pattern = "leto.link/ipfs/*", zone_id = "c7795a0adce7609a95d62fec04705aff" },
