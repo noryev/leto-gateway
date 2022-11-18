@@ -33,7 +33,10 @@ In the event of content not being already cached, a race with multiple IPFS gate
 
 Zooming in on the actual edge gateway:
 
+
+
 ![Edge gateway](./edge-gateway.png)
+
 
 Notes:
 
