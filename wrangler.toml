@@ -94,6 +94,14 @@ account_id = "4fe12d085474d33bdcfd8e9bed4d8f95"
 [env.alanshaw.vars]
 GATEWAY_HOSTNAME = 'ipfs.localhost:8787'
 
+# Dev!
+[env.loganl]
+workers_dev = true
+account_id = ""
+
+[env.loganl.vars]
+GATEWAY_HOSTNAME = 'ipfs.localhost:8787'
+
 [[migrations]]
 tag = "v1" # Should be unique for each entry
 new_classes = ["GatewayMetrics0", "SummaryMetrics0", "CidsTracker0", "GatewayRateLimits0", "GatewayRedirectCounter0"]
