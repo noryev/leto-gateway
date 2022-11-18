@@ -1,6 +1,8 @@
 # edge gateway link for leto - leto.link
 
-> The IPFS edge gateway for leto is not "another gateway", but a caching layer for NFTs that sits on top of existing IPFS public gateways.
+> The IPFS edge gateway for Leto is not "another gateway", but a caching layer for small sized objects, that sits on top of existing IPFS public gateways.
+
+This repo was originally written by the team at NFT.Storage. Big thanks to them for making this project possible.
 
 ## Getting started
 
