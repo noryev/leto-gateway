@@ -33,7 +33,7 @@ In the event of content not being already cached, a race with multiple IPFS gate
 
 Zooming in on the actual edge gateway:
 
-
+![Configuration](./leto-config.png)
 
 ![Edge gateway](./edge-gateway.png)
 
