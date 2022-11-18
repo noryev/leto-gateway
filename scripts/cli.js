@@ -5,7 +5,7 @@ import sade from 'sade'
 import { buildCmd } from './build.js'
 
 const env = process.env.ENV || 'dev'
-const prog = sade('edge-gateway-nftstorage.link')
+const prog = sade('edge-gateway-leto.link')
 
 prog
   .command('build')

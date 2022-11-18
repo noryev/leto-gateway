@@ -1,4 +1,4 @@
-# nftstorage.link wrangler config.
+# leto.link wrangler config.
 name = "gateway-nft-storage"
 main = "./dist/worker.js"
 compatibility_date = "2022-07-01"
@@ -18,20 +18,20 @@ ENV = "dev"
 # name = "gateway-nft-storage-production"
 account_id = "fffa4b4363a7e5250af8357087263b3a" # Protocol Labs CF account
 routes = [
-  { pattern = "nftstorage.link/ipfs/*", zone_id = "c7795a0adce7609a95d62fec04705aff" },
-  { pattern = "*.ipfs.nftstorage.link/*", zone_id = "c7795a0adce7609a95d62fec04705aff" },
-  { pattern = "ipfs.nftstorage.link/*", zone_id = "c7795a0adce7609a95d62fec04705aff" },
-  { pattern = "*.ipfs.nftstorage.link", zone_id = "c7795a0adce7609a95d62fec04705aff" },
-  { pattern = "nftstorage.link/ipns/", zone_id = "c7795a0adce7609a95d62fec04705aff" },
-  { pattern = "*.ipns.nftstorage.link/*", zone_id = "c7795a0adce7609a95d62fec04705aff" },
-  { pattern = "*.ipns.nftstorage.link", zone_id = "c7795a0adce7609a95d62fec04705aff" }
+  { pattern = "leto.link/ipfs/*", zone_id = "c7795a0adce7609a95d62fec04705aff" },
+  { pattern = "*.ipfs.leto.link/*", zone_id = "c7795a0adce7609a95d62fec04705aff" },
+  { pattern = "ipfs.leto.link/*", zone_id = "c7795a0adce7609a95d62fec04705aff" },
+  { pattern = "*.ipfs.leto.link", zone_id = "c7795a0adce7609a95d62fec04705aff" },
+  { pattern = "leto.link/ipns/", zone_id = "c7795a0adce7609a95d62fec04705aff" },
+  { pattern = "*.ipns.leto.link/*", zone_id = "c7795a0adce7609a95d62fec04705aff" },
+  { pattern = "*.ipns.leto.link", zone_id = "c7795a0adce7609a95d62fec04705aff" }
 ]
 kv_namespaces = [
   { binding = "GOODBITSLIST", id = "292616354e2a4f83b7ac13ef30d66a30" }
 ]
 
 [env.production.vars]
-GATEWAY_HOSTNAME = 'ipfs.nftstorage.link'
+GATEWAY_HOSTNAME = 'ipfs.leto.link'
 DEBUG = "false"
 ENV = "production"
 
@@ -46,18 +46,18 @@ environment = "production"
 # name = "gateway-nft-storage-staging"
 account_id = "fffa4b4363a7e5250af8357087263b3a" # Protocol Labs CF account
 routes = [
-  { pattern = "*.ipfs-staging.nftstorage.link/*", zone_id = "c7795a0adce7609a95d62fec04705aff" },
-  { pattern = "ipfs-staging.nftstorage.link/*", zone_id = "c7795a0adce7609a95d62fec04705aff" },
-  { pattern = "*.ipfs-staging.nftstorage.link", zone_id = "c7795a0adce7609a95d62fec04705aff" },
-  { pattern = "*.ipns-staging.nftstorage.link/*", zone_id = "c7795a0adce7609a95d62fec04705aff" },
-  { pattern = "*.ipns-staging.nftstorage.link", zone_id = "c7795a0adce7609a95d62fec04705aff" }
+  { pattern = "*.ipfs-staging.leto.link/*", zone_id = "c7795a0adce7609a95d62fec04705aff" },
+  { pattern = "ipfs-staging.leto.link/*", zone_id = "c7795a0adce7609a95d62fec04705aff" },
+  { pattern = "*.ipfs-staging.leto.link", zone_id = "c7795a0adce7609a95d62fec04705aff" },
+  { pattern = "*.ipns-staging.leto.link/*", zone_id = "c7795a0adce7609a95d62fec04705aff" },
+  { pattern = "*.ipns-staging.leto.link", zone_id = "c7795a0adce7609a95d62fec04705aff" }
 ]
 kv_namespaces = [
   { binding = "GOODBITSLIST", id = "3905c48a814d4a938e500f8b890a8602" }
 ]
 
 [env.staging.vars]
-GATEWAY_HOSTNAME = 'ipfs-staging.nftstorage.link'
+GATEWAY_HOSTNAME = 'ipfs-staging.leto.link'
 DEBUG = "true"
 ENV = "staging"
 

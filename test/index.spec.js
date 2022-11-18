@@ -14,7 +14,7 @@ test('Gets content from binding', async (t) => {
     'https://bafkreidyeivj7adnnac6ljvzj2e3rd5xdw3revw4da7mx2ckrstapoupoq.ipfs.localhost:8787'
   )
   await response.waitUntil()
-  t.is(await response.text(), 'Hello nftstorage.link! 😎')
+  t.is(await response.text(), 'Hello leto.link! 😎')
 
   // CSP
   const csp = response.headers.get('content-security-policy') || ''
@@ -32,13 +32,13 @@ test('Gets content with no csp header when goodbits csp bypass tag exists', asyn
   await goodbitsListKv.put(
     cid,
     JSON.stringify({
-      tags: ['https://nftstorage.link/tags/bypass-default-csp'],
+      tags: ['https://leto.link/tags/bypass-default-csp'],
     })
   )
 
   const response = await mf.dispatchFetch(`https://${cid}.ipfs.localhost:8787`)
   await response.waitUntil()
-  t.is(await response.text(), 'Hello nftstorage.link! 😎')
+  t.is(await response.text(), 'Hello leto.link! 😎')
 
   // CSP does not exist
   const csp = response.headers.get('content-security-policy')
@@ -60,7 +60,7 @@ test('Gets content with csp header when goodbits csp bypass tag does not exist',
 
   const response = await mf.dispatchFetch(`https://${cid}.ipfs.localhost:8787`)
   await response.waitUntil()
-  t.is(await response.text(), 'Hello nftstorage.link! 😎')
+  t.is(await response.text(), 'Hello leto.link! 😎')
 
   // CSP exists
   const csp = response.headers.get('content-security-policy')

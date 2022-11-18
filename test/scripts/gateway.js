@@ -10,7 +10,7 @@ export default {
       const headers = new Headers({
         etag: subdomainCid,
       })
-      return new Response('Hello nftstorage.link! 😎', {
+      return new Response('Hello leto.link! 😎', {
         headers,
         status: 200,
       })

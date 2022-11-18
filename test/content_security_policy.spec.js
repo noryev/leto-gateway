@@ -14,5 +14,5 @@ test('Gets content from binding', async (t) => {
     'https://bafkreidyeivj7adnnac6ljvzj2e3rd5xdw3revw4da7mx2ckrstapoupoq.ipfs.localhost:8787'
   )
   await response.waitUntil()
-  t.is(await response.text(), 'Hello nftstorage.link! 😎')
+  t.is(await response.text(), 'Hello leto.link! 😎')
 })

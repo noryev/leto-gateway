@@ -1,4 +1,4 @@
-# edge gateway link for nft.storage - nftstorage.link
+# edge gateway link for nft.storage - leto.link
 
 > The IPFS edge gateway for nft.storage is not "another gateway", but a caching layer for NFTs that sits on top of existing IPFS public gateways.
 
@@ -21,9 +21,9 @@ One time set up of your cloudflare worker subdomain for dev:
 
 ## High level architecture
 
-`nftstorage.link` is serverless code running across the globe to provide exceptional performance, reliability, and scale. It is powered by Cloudflare workers running as close as possible to end users.
+`leto.link` is serverless code running across the globe to provide exceptional performance, reliability, and scale. It is powered by Cloudflare workers running as close as possible to end users.
 
-Thanks to IPFS immutable nature, a CDN cache is an excellent fit for content retrieval as a given request URL will always return the same response. Accordingly, as a first IPFS resolution layer, `nftstorage.link` leverages Cloudflare [Cache Zone API](https://developers.cloudflare.com/workers/runtime-apis/cache) to look up for content previously cached in Cloudflare CDN (based on geolocation of the end user), as well as our SuperHot premium feature with perma-cache.
+Thanks to IPFS immutable nature, a CDN cache is an excellent fit for content retrieval as a given request URL will always return the same response. Accordingly, as a first IPFS resolution layer, `leto.link` leverages Cloudflare [Cache Zone API](https://developers.cloudflare.com/workers/runtime-apis/cache) to look up for content previously cached in Cloudflare CDN (based on geolocation of the end user), as well as our SuperHot premium feature with perma-cache.
 
 If the content is not in the first caching layers, we will trigger a dotstorage resolution where other dotstorage products cache is checked.
 
@@ -42,19 +42,19 @@ Notes:
 
 ## Usage
 
-nft.storage Gateway provides IPFS path style resolutions `https://nftstorage.link/ipfs/{cid}` as follows:
+nft.storage Gateway provides IPFS path style resolutions `https://leto.link/ipfs/{cid}` as follows:
 
 ```
-> curl https://nftstorage.link/ipfs/bafkreidyeivj7adnnac6ljvzj2e3rd5xdw3revw4da7mx2ckrstapoupoq
+> curl https://leto.link/ipfs/bafkreidyeivj7adnnac6ljvzj2e3rd5xdw3revw4da7mx2ckrstapoupoq
 Hello nft.storage! 😎
-> curl https://nftstorage.link/ipfs/QmT5NvUtoM5nWFfrQdVrFtvGfKFmG7AHE8P34isapyhCxX
+> curl https://leto.link/ipfs/QmT5NvUtoM5nWFfrQdVrFtvGfKFmG7AHE8P34isapyhCxX
 ...
 ```
 
-In practice, when nft.storage Gateway receives a IPFS path style request, it will redirect to a subdomain style resolution maintaining compliance with the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy). The canonical form of access `https://{CID}.ipfs.nftstorage.link/{optional path to resource}` causes the browser to interpret each returned file as being from a different origin.
+In practice, when nft.storage Gateway receives a IPFS path style request, it will redirect to a subdomain style resolution maintaining compliance with the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy). The canonical form of access `https://{CID}.ipfs.leto.link/{optional path to resource}` causes the browser to interpret each returned file as being from a different origin.
 
 ```
-> curl https://bafkreidyeivj7adnnac6ljvzj2e3rd5xdw3revw4da7mx2ckrstapoupoq.ipfs.nftstorage.link
+> curl https://bafkreidyeivj7adnnac6ljvzj2e3rd5xdw3revw4da7mx2ckrstapoupoq.ipfs.leto.link
 Hello nft.storage! 😎
 ```
 
@@ -66,6 +66,6 @@ nft.storage Gateway is currently rate limited at 200 requests per minute to a gi
 
 ## Deny List
 
-We rely on [badbits](https://badbits.dwebops.pub/) denylist together wtth our own denylist to prevent serving malicious content to the nftstorage.link users.
+We rely on [badbits](https://badbits.dwebops.pub/) denylist together wtth our own denylist to prevent serving malicious content to the leto.link users.
 
 When new malicious content is discovered, it should be reported to [badbits](https://badbits.dwebops.pub/) denylist given it is shared among multiple gateways.

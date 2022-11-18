@@ -34,7 +34,7 @@ export function envAll(request, env, ctx) {
     version: env.VERSION,
     commit: env.COMMITHASH,
     branch: env.BRANCH,
-    worker: 'nftstorage.link',
+    worker: 'leto.link',
     env: env.ENV,
     sentry: env.sentry,
   })

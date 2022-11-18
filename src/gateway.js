@@ -5,7 +5,7 @@ import { CID } from 'multiformats/cid'
 
 import { InvalidUrlError } from './errors.js'
 
-const GOODBITS_BYPASS_TAG = 'https://nftstorage.link/tags/bypass-default-csp'
+const GOODBITS_BYPASS_TAG = 'https://leto.link/tags/bypass-default-csp'
 
 /**
  * Handle gateway requests
@@ -74,7 +74,7 @@ async function getTagsFromGoodbitsList(datastore, cid) {
     return []
   }
 
-  // TODO: Remove once https://github.com/nftstorage/nftstorage.link/issues/51 is fixed
+  // TODO: Remove once https://github.com/leto/leto.link/issues/51 is fixed
   const goodbitsEntry = await pRetry(() => datastore.get(cid), { retries: 5 })
 
   if (goodbitsEntry) {
