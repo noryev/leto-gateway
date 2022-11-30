@@ -1,6 +1,6 @@
-# edge gateway link for leto - leto.link
+# Leto.gg
 
-> The IPFS edge gateway for Leto is not "another gateway", but a caching layer for small sized objects, that sits on top of existing IPFS public gateways.
+> The IPFS edge gateway for Leto is not "another gateway", but a caching layer for small sized objects, that sits on top of existing IPFS public gateways for anonymous metrics via http gateway requests. 
 
 This repo was originally written by the team at NFT.Storage. Big thanks to them for making this project possible!
 
@@ -23,9 +23,9 @@ One time set up of your cloudflare worker subdomain for dev:
 
 ## High level architecture
 
-`leto.link` is serverless code running across the globe to provide exceptional performance, reliability, and scale. It is powered by Cloudflare workers running as close as possible to end users.
+`leto.gg` is serverless code running across the globe to provide exceptional performance, reliability, and scale. It is powered by Cloudflare workers running as close as possible to end users.
 
-Thanks to IPFS immutable nature, a CDN cache is an excellent fit for content retrieval as a given request URL will always return the same response. Accordingly, as a first IPFS resolution layer, `leto.link` leverages Cloudflare [Cache Zone API](https://developers.cloudflare.com/workers/runtime-apis/cache) to look up for content previously cached in Cloudflare CDN (based on geolocation of the end user), as well as our SuperHot premium feature with perma-cache.
+Thanks to the immutable nature of IPFS, a CDN cache is an excellent fit for content retrieval as a given request URL will always return the same response. Accordingly, as a first IPFS resolution layer, `leto.gg` leverages Cloudflare [Cache Zone API](https://developers.cloudflare.com/workers/runtime-apis/cache) to look up for content previously cached in Cloudflare CDN (based on geolocation of the end user).
 
 If the content is not in the first caching layers, we will trigger a dotstorage resolution where other dotstorage products cache is checked.
 
@@ -46,19 +46,19 @@ Notes:
 
 ## Usage
 
-leto Gateway provides IPFS path style resolutions `https://leto.link/ipfs/{cid}` as follows:
+Leto Gateway provides IPFS path style resolutions `https://leto.gg/ipfs/{cid}` as follows:
 
 ```
-> curl https://leto.link/ipfs/bafkreidyeivj7adnnac6ljvzj2e3rd5xdw3revw4da7mx2ckrstapoupoq
+> curl https://leto.gg/ipfs/bafkreidyeivj7adnnac6ljvzj2e3rd5xdw3revw4da7mx2ckrstapoupoq
 Hello leto! 😎
-> curl https://leto.link/ipfs/QmT5NvUtoM5nWFfrQdVrFtvGfKFmG7AHE8P34isapyhCxX
+> curl https://leto.gg/ipfs/QmT5NvUtoM5nWFfrQdVrFtvGfKFmG7AHE8P34isapyhCxX
 ...
 ```
 
-In practice, when leto Gateway receives a IPFS path style request, it will redirect to a subdomain style resolution maintaining compliance with the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy). The canonical form of access `https://{CID}.ipfs.leto.link/{optional path to resource}` causes the browser to interpret each returned file as being from a different origin.
+In practice, when Leto Gateway receives a IPFS path style request, it will redirect to a subdomain style resolution maintaining compliance with the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy). The canonical form of access `https://{CID}.ipfs.leto.gg/{optional path to resource}` causes the browser to interpret each returned file as being from a different origin.
 
 ```
-> curl https://bafkreidyeivj7adnnac6ljvzj2e3rd5xdw3revw4da7mx2ckrstapoupoq.ipfs.leto.link
+> curl https://bafkreidyeivj7adnnac6ljvzj2e3rd5xdw3revw4da7mx2ckrstapoupoq.ipfs.leto.gg
 Hello leto! 😎
 ```
 
@@ -66,7 +66,7 @@ Please note that subdomain resolution is only supported with [CIDv1](https://doc
 
 ### Rate limiting
 
-leto Gateway is currently rate limited at 200 requests per minute to a given IP Address. In the event of a rate limit, the IP will be blocked for 30 seconds.
+Leto Gateway is currently rate limited at 200 requests per minute to a given IP Address. In the event of a rate limit, the IP will be blocked for 30 seconds.
 
 ## Deny List
 
