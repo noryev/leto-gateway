@@ -46,19 +46,19 @@ Notes:
 
 ## Usage
 
-Leto Gateway provides IPFS path style resolutions `https://leto.link/ipfs/{cid}` as follows:
+Leto Gateway provides IPFS path style resolutions `https://leto.gg/ipfs/{cid}` as follows:
 
 ```
-> curl https://leto.link/ipfs/bafkreidyeivj7adnnac6ljvzj2e3rd5xdw3revw4da7mx2ckrstapoupoq
+> curl https://leto.gg/ipfs/bafkreidyeivj7adnnac6ljvzj2e3rd5xdw3revw4da7mx2ckrstapoupoq
 Hello leto! 😎
-> curl https://leto.link/ipfs/QmT5NvUtoM5nWFfrQdVrFtvGfKFmG7AHE8P34isapyhCxX
+> curl https://leto.gg/ipfs/QmT5NvUtoM5nWFfrQdVrFtvGfKFmG7AHE8P34isapyhCxX
 ...
 ```
 
 In practice, when Leto Gateway receives a IPFS path style request, it will redirect to a subdomain style resolution maintaining compliance with the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy). The canonical form of access `https://{CID}.ipfs.leto.link/{optional path to resource}` causes the browser to interpret each returned file as being from a different origin.
 
 ```
-> curl https://bafkreidyeivj7adnnac6ljvzj2e3rd5xdw3revw4da7mx2ckrstapoupoq.ipfs.leto.link
+> curl https://bafkreidyeivj7adnnac6ljvzj2e3rd5xdw3revw4da7mx2ckrstapoupoq.ipfs.leto.gg
 Hello leto! 😎
 ```
 
