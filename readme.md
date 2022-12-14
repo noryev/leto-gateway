@@ -1,6 +1,6 @@
-# Leto.gg[A caching layer built built for the leto metrics engine]
+# Leto.gg
 
-> The IPFS edge gateway for Leto is not "another gateway", but a caching layer for small sized objects, that sits on top of existing IPFS public gateways for anonymous metrics via http gateway requests. 
+> A caching layer built built for the leto metrics engine
 
 This repo was originally written by the team at NFT.Storage. Big thanks to them for making this project possible!
 
