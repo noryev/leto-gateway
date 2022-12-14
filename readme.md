@@ -31,7 +31,7 @@ If the content is not in the first caching layers, we will trigger a dotstorage 
 
 In the event of content not being already cached, a race with multiple IPFS gateways is performed. As soon as one gateway successfully responds, its response is forwarded to the user and added to Cloudflare Cache.
 
-## Anonymous Gatewat Metrics API 
+## Anonymous Gateway Metrics API 
 With a simple public website or a HTTP GET request, you can tell how many times an IPFS object was requested/served to a user.
 API endpoint URL
 The main public API endpoint URL for LetoMetrics is https://leto.metrics.gg. All endpoints documented should be made relative to this root URL. 
