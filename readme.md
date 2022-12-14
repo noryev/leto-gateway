@@ -1,6 +1,6 @@
 # Leto.gg
 
-> A caching layer built built for the leto metrics engine
+> A caching layer built for the leto metrics engine(this repo currently is using the configuration built by NFT.Storage)
 
 This repo was originally written by the team at NFT.Storage. Big thanks to them for making this project possible!
 
