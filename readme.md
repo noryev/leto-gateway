@@ -42,16 +42,6 @@ https://leto.metrics.gg/cid/ and leto.metrics.gg will respond with something lik
 "requests": "93", }
 
 
-
-![Public Race](./edge-gateway-public-race.png)
-
-Zooming in on the actual edge gateway:
-
-![Configuration](./leto-config.png)
-
-![Edge gateway](./edge-gateway.png)
-
-
 Notes:
 
 - Cloudflare Cache is [limited](https://developers.cloudflare.com/workers/platform/limits/#cache-api-limits) to 200 MB size objects.
