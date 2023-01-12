@@ -1,0 +1,29 @@
+{
+  "name": "w3link",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "description": "w3link packages",
+  "scripts": {
+    "test": "run-s test:*",
+    "build": "run-s build:*",
+    "test:w3link-edge-gateway": "pnpm --filter w3link-edge-gateway test",
+    "build:w3link-edge-gateway": "pnpm --filter w3link-edge-gateway build",
+    "lint": "standard",
+    "clean": "rm -rf node_modules pnpm-lock.yml packages/*/{pnpm-lock.yml,.next,out,coverage,.nyc_output,worker,dist,node_modules}"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "standard": "^17.0.0",
+    "wrangler": "^2.0.15"
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "author": "Vasco Santos <santos.vasco10@gmail.com>",
+  "license": "Apache-2.0 OR MIT"
+}

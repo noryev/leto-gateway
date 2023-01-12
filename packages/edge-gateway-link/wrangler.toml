@@ -1,0 +1,83 @@
+# leto.gg wrangler config.
+name = "w3link-edge-gateway"
+main = "./dist/worker.js"
+compatibility_date = "2022-07-01"
+compatibility_flags = [ "url_standard" ]
+no_bundle = true
+
+[build]
+command = "npm run build"
+
+# miniflare
+[vars]
+DEBUG = "true"
+ENV = "dev"
+
+# PROD!
+[env.production]
+# name = "w3link-edge-gateway-production"
+account_id = "fffa4b4363a7e5250af8357087263b3a" # Protocol Labs CF account
+routes = [
+  { pattern = "leto.gg/ipfs/*", zone_id = "ae60d8f737317467ec666dc3851a6277" },
+  { pattern = "*.ipfs.leto.gg/*", zone_id = "ae60d8f737317467ec666dc3851a6277" },
+  { pattern = "ipfs.leto.gg/*", zone_id = "ae60d8f737317467ec666dc3851a6277" },
+  { pattern = "*.ipfs.leto.gg", zone_id = "ae60d8f737317467ec666dc3851a6277" },
+  { pattern = "leto.gg/ipns/*", zone_id = "ae60d8f737317467ec666dc3851a6277" },
+  { pattern = "*.ipns.leto.gg/*", zone_id = "ae60d8f737317467ec666dc3851a6277" },
+  { pattern = "*.ipns.leto.gg", zone_id = "ae60d8f737317467ec666dc3851a6277" },
+  { pattern = "*/*", zone_id = "ae60d8f737317467ec666dc3851a6277" }
+]
+kv_namespaces = [
+  { binding = "GOODBITSLIST", id = "292616354e2a4f83b7ac13ef30d66a30" }
+]
+
+[env.production.vars]
+GATEWAY_HOSTNAME = 'ipfs.leto.gg'
+CSP_REPORT_URI = 'https://csp-report-to.web3.storage'
+DEBUG = "false"
+ENV = "production"
+
+[[env.production.services]]
+binding = "EDGE_GATEWAY"
+type = "service"
+service = "dotstorage-edge-gateway-production"
+environment = "production"
+
+# Staging!
+[env.staging]
+# name = "gateway-nft-storage-staging"
+account_id = "fffa4b4363a7e5250af8357087263b3a" # Protocol Labs CF account
+routes = [
+  { pattern = "*.ipfs-staging.leto.gg/*", zone_id = "ae60d8f737317467ec666dc3851a6277" },
+  { pattern = "ipfs-staging.leto.gg/*", zone_id = "ae60d8f737317467ec666dc3851a6277" },
+  { pattern = "*.ipfs-staging.leto.gg", zone_id = "ae60d8f737317467ec666dc3851a6277" },
+  { pattern = "*.ipns-staging.leto.gg/*", zone_id = "ae60d8f737317467ec666dc3851a6277" },
+  { pattern = "*.ipns-staging.leto.gg", zone_id = "ae60d8f737317467ec666dc3851a6277" }
+]
+kv_namespaces = [
+  { binding = "GOODBITSLIST", id = "3905c48a814d4a938e500f8b890a8602" }
+]
+
+[env.staging.vars]
+GATEWAY_HOSTNAME = 'ipfs-staging.leto.gg'
+CSP_REPORT_URI = 'https://staging.csp-report-to.web3.storage'
+DEBUG = "true"
+ENV = "staging"
+
+[[env.staging.services]]
+binding = "EDGE_GATEWAY"
+type = "service"
+service = "dotstorage-edge-gateway-staging"
+environment = "production"
+
+# Test!
+[env.test]
+workers_dev = true
+kv_namespaces = [
+  { binding = "GOODBITSLIST" }
+]
+
+[env.test.vars]
+GATEWAY_HOSTNAME = 'ipfs.localhost:8787'
+DEBUG = "true"
+ENV = "test"
