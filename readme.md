@@ -11,6 +11,9 @@ One time set up of your cloudflare worker subdomain for dev:
 - `pnpm install` - Install the project dependencies from the monorepo root directory.
 - `pnpm dev` - Run the worker in dev mode.
 
+## Gateway Usage
+
+
 ## Environment setup
 
 - Add secrets
