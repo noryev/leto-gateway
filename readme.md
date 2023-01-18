@@ -52,10 +52,6 @@ If the content is not in the first caching layers, we will trigger a dotstorage 
 In the event of content not being already cached, a race with multiple IPFS gateways is performed. As soon as one gateway successfully responds, its response is forwarded to the user and added to Cloudflare Cache.
 
 
-## Rate limiting
-
-Leto Gateway is currently rate limited at 2000 requests per minute to a given IP Address. In the event of a rate limit, the IP will be blocked for 30 seconds.
-
 ## Deny List
 
 We rely on [badbits](https://badbits.dwebops.pub/) denylist together wtth our own denylist to prevent serving malicious content to the leto.link users.
