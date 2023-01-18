@@ -1,7 +1,6 @@
 /* eslint-env serviceworker */
 
 import { Router } from 'itty-router'
-
 import { ipfsGet } from './ipfs.js'
 import { ipnsGet } from './ipns.js'
 import { versionGet } from './version.js'
@@ -33,7 +32,7 @@ router
  * @param {Request} request
  * @param {import('./env').Env} env
  */
-function serverError (error, request, env) {
+function serverError(error, request, env) {
   return addCorsHeaders(request, errorHandler(error, env))
 }
 
@@ -44,7 +43,7 @@ export default {
    * @param {import("./bindings").Env} env
    * @param {Ctx} ctx
    */
-  async fetch (request, env, ctx) {
+  async fetch(request, env, ctx) {
     try {
       const res = await router.handle(request, env, ctx)
       env.log.timeEnd('request')
