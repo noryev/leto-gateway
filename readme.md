@@ -57,3 +57,7 @@ In the event of content not being already cached, a race with multiple IPFS gate
 We rely on [badbits](https://badbits.dwebops.pub/) denylist together wtth our own denylist to prevent serving malicious content to the leto.link users.
 
 When new malicious content is discovered, it should be reported to [badbits](https://badbits.dwebops.pub/) denylist given it is shared among multiple gateways.
+
+The configuration above is still in progress, currently we have a standard ipfs Gateway at gateway.leto.gg and its handling our preliminary testing for now until the production 2 way gateway is running. 
+- Current Usage Stats(Jan 19th 2023)![Screenshot 2023-01-19 at 3 46 47 AM](https://user-images.githubusercontent.com/30084404/213410162-77c48f3e-db55-4c6a-9cae-0ae5bbd5ae8b.png)
+
