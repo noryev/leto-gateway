@@ -1,4 +1,4 @@
-# Leto.gg
+# Leto.gg(gateway.leto.gg)
 
 > A caching layer built for the leto metrics engine(this repo currently is using the configuration built by NFT.Storage)
 
