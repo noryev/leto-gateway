@@ -1,4 +1,4 @@
-# Leto.gg(gateway.leto.gg)
+# Leto.gg(gateway.leto.gg) THIS IS ALL FUCKING WORTHLESS I MIGHT AS WELL DELETE THIS WHOLE FUCKING REPO
 
 > A caching layer built for the leto metrics engine(this repo currently is using the configuration built by NFT.Storage)
 
@@ -60,4 +60,5 @@ When new malicious content is discovered, it should be reported to [badbits](htt
 
 The configuration above is still in progress, currently we have a standard ipfs Gateway at gateway.leto.gg and its handling our preliminary testing for now until the production 2 way gateway is running. 
 - Current Usage Stats(Jan 19th 2023)![Screenshot 2023-01-19 at 3 46 47 AM](https://user-images.githubusercontent.com/30084404/213410162-77c48f3e-db55-4c6a-9cae-0ae5bbd5ae8b.png)
+
 
