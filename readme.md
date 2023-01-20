@@ -1,4 +1,4 @@
-# Leto.gg(gateway.leto.gg) THIS IS ALL FUCKING WORTHLESS I MIGHT AS WELL DELETE THIS WHOLE FUCKING GITHUB ACCOUNT
+# Leto.gg(gateway.leto.gg) 
 
 > A caching layer built for the leto metrics engine(this repo currently is using the configuration built by NFT.Storage)
 
