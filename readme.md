@@ -7,21 +7,21 @@ This repo was originally written by the team at NFT.Storage. Big thanks to them 
 ## Getting started
 
 ## Bad-Bits Denylist Script for automated removal
-`
-#!/bin/bash
 
-# specify the path to the default IPFS storage directory
-IPFS_STORAGE_DIR="~/.ipfs"
+    #!/bin/bash
 
-# specify the deny-list file containing the CIDs of the files to be removed
-DENY_LIST_FILE="deny-list.json"
+    # specify the path to the default IPFS storage directory
+    IPFS_STORAGE_DIR="~/.ipfs"
 
-# read the deny-list file
-CIDS=$(jq -r '.[]' $DENY_LIST_FILE)
+    # specify the deny-list file containing the CIDs of the files to be removed
+    DENY_LIST_FILE="deny-list.json"
 
-# loop through the CIDs in the deny-list file
-for CID in $CIDS; do
+    # read the deny-list file
+    CIDS=$(jq -r '.[]' $DENY_LIST_FILE)
+
+    # loop through the CIDs in the deny-list file
+    for CID in $CIDS; do
     # run the ipfs pin rm command to remove each CID
     ipfs pin rm $CID
 done
-`
+
