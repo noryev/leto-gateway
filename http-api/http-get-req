@@ -1,0 +1,19 @@
+from flask import Flask, jsonify, request
+from json import dumps
+import ipfshttpclient
+
+app = Flask(cidretrieve)
+
+# Connect to IPFS gateway
+ipfs = ipfshttpclient.connect('/ip4/127.0.0.1/tcp/5001/http')
+
+@app.route("/ipfs/<cid>", methods=["GET"])
+def get_ipfs_object(cid):
+    try:
+        data = ipfs.cat(cid)
+        return jsonify({"cid": cid, "data": data.decode()}), 200
+    except:
+        return jsonify({"error": "Invalid CID or object not found"}), 404
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8000)
