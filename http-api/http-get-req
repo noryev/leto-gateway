@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 from json import dumps
 import ipfshttpclient
 
-app = Flask(__name__)
+app = Flask(cidretrieve)
 
 # Connect to IPFS gateway
 ipfs = ipfshttpclient.connect('/ip4/127.0.0.1/tcp/5001/http')
