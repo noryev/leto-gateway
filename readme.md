@@ -23,5 +23,7 @@ This repo was originally written by the team at NFT.Storage. Big thanks to them 
     for CID in $CIDS; do
     # run the ipfs pin rm command to remove each CID
     ipfs pin rm $CID
+    
+# Script accessibility(you need to make sure the script can read the bad-bits file in regards to the filesystem the bad-bits.json file. 
 done
 
