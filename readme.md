@@ -7,7 +7,7 @@ This repo was originally written by the team at NFT.Storage. Big thanks to them 
 ## Getting started
 
 ## Bad-Bits Denylist Script for automated removal
-
+`
 #!/bin/bash
 
 # specify the path to the default IPFS storage directory
@@ -24,3 +24,4 @@ for CID in $CIDS; do
     # run the ipfs pin rm command to remove each CID
     ipfs pin rm $CID
 done
+`
