@@ -12,6 +12,18 @@ This repo was originally written by the team at NFT.Storage. Big thanks to them 
 
     2. Then add the contents within "runtime/ipfs.service" into the file using NANO or VIM. 
 
+   Extra Notes: 
+   
+- Reload the systemd configuration by running the command sudo systemctl daemon-reload
+
+    - Enable the IPFS service to start automatically at boot by running the command sudo systemctl enable ipfs
+
+    - Start the IPFS service by running the command sudo systemctl start ipfs
+
+    - To check the status of the service, you can use the command sudo systemctl status ipfs
+
+    - To stop the service, you can use the command sudo systemctl stop ipfs
+
 ## Bad-Bits Denylist Script for automated removal
 
     #!/bin/bash
