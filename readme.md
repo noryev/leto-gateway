@@ -6,6 +6,10 @@ This repo was originally written by the team at NFT.Storage. Big thanks to them 
 
 ## Getting started
 
+    This is a simple AWS EC2 Server running a Kubo node configured to act as a IPFS gateway. I totally understand there are much better configurations to set a gateway up with but this is really just a testbed for some features in development and this is a good "vanilla" enviroment for me to test on. 
+
+    Be sure to enable IPFS to run on this EC2 node by enabling an service. Do this by creating a new service file for IPFS by running the command sudo nano /etc/systemd/system/ipfs.service
+    
 ## Bad-Bits Denylist Script for automated removal
 
     #!/bin/bash
